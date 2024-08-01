@@ -6,7 +6,7 @@ import { Footer, Navbar } from '../components';
 
 const App = ({ Component, pageProps }) => (
 
-  <ThemeProvider attribute="class" defaultTheme="light">
+  <ThemeProvider attribute="class">
     <div className="dark:bg-nft-dark bg-white min-h-screen">
       <Navbar />
       <Component {...pageProps} />
