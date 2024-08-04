@@ -18,7 +18,7 @@ const MenuItems = ({ isMobile, active, setActive }) => {
   };
 
   return (
-    <ul className={`list-none flexCenter flex-row ${isMobile && 'flex-col h-full'}`}>
+    <ul className={`list-none flexCenter flex-row ${isMobile ? 'flex-col h-full' : undefined}`}>
       {['Explore NFTs', 'Listed NFTs', 'My NFTs'].map((item, i) => (
         <li
           key={i}
@@ -71,7 +71,7 @@ const Navbar = () => {
         <Link href="/">
           <div className="flexCenter md:hidden cursor-pointer" onClick={() => {}}>
             <Image src={images.logo02} objectFit="contain" width={32} height={32} alt="logo" />
-            <p className="dark:text-woohite text-nft-black-1 font-semibold text-lg ml-1">CryptoNet</p>
+            <p className="dark:text-white text-nft-black-1 font-semibold text-lg ml-1">CryptoNet</p>
           </div>
         </Link>
         <Link href="/">
@@ -113,7 +113,7 @@ const Navbar = () => {
               height={25}
               alt="close"
               onClick={() => setIsOpen(false)}
-              className={theme === 'light' && 'filter invert'}
+              className={theme === 'light' ? 'filter invert' : undefined}
             />
           ) : (
             <Image
@@ -123,7 +123,7 @@ const Navbar = () => {
               height={25}
               alt="menu"
               onClick={() => setIsOpen(true)}
-              className={theme === 'light' && 'filter invert'}
+              className={theme === 'light' ? 'filter invert' : undefined}
             />
           )}
 
